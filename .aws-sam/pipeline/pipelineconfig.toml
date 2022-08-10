@@ -1,0 +1,23 @@
+version = 0.1
+[default]
+[default.pipeline_bootstrap]
+[default.pipeline_bootstrap.parameters]
+pipeline_user = "arn:aws:iam::641054126528:role/ceeams-deployment"
+
+[build]
+[build.pipeline_bootstrap]
+[build.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::641054126528:role/ceeams-deployment"
+cloudformation_execution_role = "arn:aws:iam::641054126528:role/ceeams-deployment"
+artifacts_bucket = "aws-sam-cli-managed-build-pipelin-artifactsbucket-1g0g2otwa59tx"
+image_repository = ""
+region = "us-east-1"
+
+[deploy]
+[deploy.pipeline_bootstrap]
+[deploy.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::641054126528:role/ceeams-deployment"
+cloudformation_execution_role = "arn:aws:iam::641054126528:role/ceeams-deployment"
+artifacts_bucket = "aws-sam-cli-managed-deploy-pipeli-artifactsbucket-13nxjjitkdfkx"
+image_repository = ""
+region = "us-east-1"
